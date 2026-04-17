@@ -1,11 +1,5 @@
-﻿using System;
-using System.Text;
-using System.Collections.Generic;
-using System.Linq;
-using Microsoft.VisualStudio.TestTools.UnitTesting;
-using OfficeOpenXml;
-using OfficeOpenXml.Style;
-using OfficeOpenXml.FormulaParsing.ExcelUtilities;
+﻿using OfficeOpenXml.Style;
+
 namespace EPPlusTest
 {
     /// <summary>

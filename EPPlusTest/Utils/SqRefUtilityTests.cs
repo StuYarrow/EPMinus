@@ -1,8 +1,4 @@
 ﻿using System;
-using System.Text;
-using System.Collections.Generic;
-using System.Linq;
-using Microsoft.VisualStudio.TestTools.UnitTesting;
 using OfficeOpenXml.Utils;
 
 namespace EPPlusTest.Utils
@@ -10,10 +6,10 @@ namespace EPPlusTest.Utils
     [TestClass]
     public class SqRefUtilityTests
     {
-        [TestMethod, ExpectedException(typeof(ArgumentNullException))]
+        [TestMethod]
         public void SqRefUtility_ToSqRefAddress_ShouldThrowIfAddressIsNullOrEmpty()
         {
-            SqRefUtility.ToSqRefAddress(null);
+            Assert.Throws<ArgumentNullException>(() => SqRefUtility.ToSqRefAddress(null));
         }
 
         [TestMethod]

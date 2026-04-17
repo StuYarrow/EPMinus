@@ -1,12 +1,4 @@
 ﻿using System;
-using System.IO;
-using System.Linq;
-using Microsoft.VisualStudio.TestTools.UnitTesting;
-using OfficeOpenXml;
-using OfficeOpenXml.FormulaParsing;
-using OfficeOpenXml.FormulaParsing.ExcelUtilities;
-using OfficeOpenXml.FormulaParsing.ExpressionGraph;
-using FakeItEasy;
 
 namespace EPPlusTest.FormulaParsing.ExpressionGraph
 {
@@ -34,16 +26,16 @@ namespace EPPlusTest.FormulaParsing.ExpressionGraph
             _scope.Dispose();
         }
 
-        [TestMethod, ExpectedException(typeof(ArgumentNullException))]
+        [TestMethod]
         public void ConstructorShouldThrowIfExcelDataProviderIsNull()
         {
-            new ExcelAddressExpression("A1", null, _parsingContext);
+            Assert.Throws<ArgumentNullException>(() => new ExcelAddressExpression("A1", null, _parsingContext));
         }
 
-        [TestMethod, ExpectedException(typeof(ArgumentNullException))]
+        [TestMethod]
         public void ConstructorShouldThrowIfParsingContextIsNull()
         {
-            new ExcelAddressExpression("A1", A.Fake<ExcelDataProvider>(), null);
+            Assert.Throws<ArgumentNullException>(() => new ExcelAddressExpression("A1", A.Fake<ExcelDataProvider>(), null));
         }
 
         //TODO:Fix Test /Janne

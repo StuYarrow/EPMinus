@@ -1,10 +1,4 @@
-﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
-using OfficeOpenXml;
-using OfficeOpenXml.Drawing.Chart;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
+﻿using OfficeOpenXml.Drawing.Chart;
 using System.Threading.Tasks;
 using System.Xml;
 

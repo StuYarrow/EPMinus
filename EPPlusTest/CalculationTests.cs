@@ -1,13 +1,5 @@
 ﻿using System;
-using System.Globalization;
-using System.Text;
-using System.Collections.Generic;
-using System.Linq;
-using Microsoft.VisualStudio.TestTools.UnitTesting;
-using OfficeOpenXml;
-using System.IO;
 using System.Diagnostics;
-using OfficeOpenXml.FormulaParsing;
 
 namespace EPPlusTest
 {
@@ -269,7 +261,7 @@ namespace EPPlusTest
             var pck = new ExcelPackage();
             var ws = pck.Workbook.Worksheets.Add("CalcTest");
             var currentDate = DateTime.UtcNow.Date;
-            ws.SetValue("A1", currentDate.ToString("MM/dd/yyyy"));
+            ws.SetValue("A1", currentDate.ToString());
             ws.SetValue("A2", currentDate.Date);
             ws.SetValue("A3", "31.1");
             ws.SetValue("A4", 31.1);
@@ -279,6 +271,8 @@ namespace EPPlusTest
             ws.Cells["A8"].Formula = "INT(A4)";
 
             ws.Calculate();
+            var a1 = ws.Cells["A1"];
+            var a5 = ws.Cells["A5"];
             Assert.AreEqual((int)currentDate.ToOADate(), ws.Cells["A5"].Value);
             Assert.AreEqual((int)currentDate.ToOADate(), ws.Cells["A6"].Value);
             Assert.AreEqual(31, ws.Cells["A7"].Value);

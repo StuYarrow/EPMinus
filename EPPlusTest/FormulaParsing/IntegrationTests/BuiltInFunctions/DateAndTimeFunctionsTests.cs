@@ -1,15 +1,4 @@
 ﻿using System;
-using System.Text;
-using System.Collections.Generic;
-using System.Globalization;
-using System.Linq;
-using Microsoft.VisualStudio.TestTools.UnitTesting;
-using OfficeOpenXml;
-using OfficeOpenXml.FormulaParsing;
-using OfficeOpenXml.FormulaParsing.ExpressionGraph;
-using FakeItEasy;
-using System.IO;
-using System.Threading;
 
 namespace EPPlusTest.FormulaParsing.IntegrationTests.BuiltInFunctions
 {

@@ -1,11 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using Microsoft.VisualStudio.TestTools.UnitTesting;
-using OfficeOpenXml;
-using System.IO;
 using OfficeOpenXml.Drawing;
-using System.Drawing;
 using OfficeOpenXml.Drawing.Chart;
 using OfficeOpenXml.Drawing.Vml;
 using OfficeOpenXml.Style;
@@ -13,8 +7,6 @@ using System.Data;
 using OfficeOpenXml.Table.PivotTable;
 using System.Reflection;
 using OfficeOpenXml.Table;
-using System.Threading;
-using System.Globalization;
 
 namespace EPPlusTest
 {
@@ -177,11 +169,11 @@ namespace EPPlusTest
                 Assert.AreEqual(ws.Cells["F5"].Style.Font.UnderLineType, ExcelUnderLineType.None);
                 Assert.AreEqual(ws.Cells["F5"].Style.Font.UnderLine, false);
 
-                Assert.AreEqual(ws.Cells["T20"].GetValue<string>(), 0.396180555555556d.ToString(CultureInfo.CurrentCulture));
+                Assert.AreEqual(ws.Cells["T20"].GetValue<string>(), 0.39618055555555554d.ToString(CultureInfo.CurrentCulture));
                 Assert.AreEqual(ws.Cells["T20"].GetValue<int>(), 0);
                 Assert.AreEqual(ws.Cells["T20"].GetValue<int?>(), 0);
-                Assert.AreEqual(ws.Cells["T20"].GetValue<double>(), 0.396180555555556d);
-                Assert.AreEqual(ws.Cells["T20"].GetValue<double?>(), 0.396180555555556d);
+                Assert.AreEqual(ws.Cells["T20"].GetValue<double>(), 0.39618055555555554d);
+                Assert.AreEqual(ws.Cells["T20"].GetValue<double?>(), 0.39618055555555554d);
                 Assert.AreEqual(ws.Cells["T20"].GetValue<decimal>(), 0.396180555555556m);
                 Assert.AreEqual(ws.Cells["T20"].GetValue<decimal?>(), 0.396180555555556m);
                 Assert.AreEqual(ws.Cells["T20"].GetValue<bool>(), true);
@@ -192,11 +184,11 @@ namespace EPPlusTest
                 Assert.AreEqual(ws.Cells["T20"].GetValue<TimeSpan?>(), new TimeSpan(693593, 9, 30, 30));
                 Assert.AreEqual(ws.Cells["T20"].Text, "09:30:30");
 
-                Assert.AreEqual(ws.Cells["T24"].GetValue<string>(), 1.39618055555556d.ToString(CultureInfo.CurrentCulture));
+                Assert.AreEqual(ws.Cells["T24"].GetValue<string>(), 1.3961805555555555d.ToString(CultureInfo.CurrentCulture));
                 Assert.AreEqual(ws.Cells["T24"].GetValue<int>(), 1);
                 Assert.AreEqual(ws.Cells["T24"].GetValue<int?>(), 1);
-                Assert.AreEqual(ws.Cells["T24"].GetValue<double>(), 1.39618055555556d);
-                Assert.AreEqual(ws.Cells["T24"].GetValue<double?>(), 1.39618055555556d);
+                Assert.AreEqual(ws.Cells["T24"].GetValue<double>(), 1.3961805555555555d);
+                Assert.AreEqual(ws.Cells["T24"].GetValue<double?>(), 1.3961805555555555d);
                 Assert.AreEqual(ws.Cells["T24"].GetValue<decimal>(), 1.39618055555556m);
                 Assert.AreEqual(ws.Cells["T24"].GetValue<decimal?>(), 1.39618055555556m);
                 Assert.AreEqual(ws.Cells["T24"].GetValue<bool>(), true);
@@ -360,7 +352,7 @@ namespace EPPlusTest
                 Assert.AreEqual(r1.Bold, true);
 
                 ws = pck.Workbook.Worksheets["Pic URL"];
-                Assert.AreEqual(((ExcelPicture)ws.Drawings["Pic URI"]).Hyperlink, "http://epplus.codeplex.com");
+                Assert.AreEqual(((ExcelPicture)ws.Drawings["Pic URI"]).Hyperlink.ToString(), "http://epplus.codeplex.com");
 
                 Assert.AreEqual(pck.Workbook.Worksheets["Address"].GetValue<string>(40, 1), "\b\t");
 
@@ -1155,19 +1147,17 @@ namespace EPPlusTest
 
 
         [TestMethod]
-        [ExpectedException(typeof(ArgumentException))]
         public void TestTableNameCanNotStartsWithNumber()
         {
             var ws = _pck.Workbook.Worksheets.Add("Table");
-            var tbl = ws.Tables.Add(ws.Cells["A1"], "5TestTable");
+            Assert.Throws<ArgumentException>(() => ws.Tables.Add(ws.Cells["A1"], "5TestTable"));
         }
 
         [TestMethod]
-        [ExpectedException(typeof(ArgumentException))]
         public void TestTableNameCanNotContainWhiteSpaces()
         {
             var ws = _pck.Workbook.Worksheets.Add("Table");
-            var tbl = ws.Tables.Add(ws.Cells["A1"], "Test Table");
+            Assert.Throws<ArgumentException>(() => ws.Tables.Add(ws.Cells["A1"], "Test Table"));
         }
 
         [TestMethod]
@@ -2735,24 +2725,22 @@ namespace EPPlusTest
         }
 
         [TestMethod]
-        [ExpectedException(typeof(ArgumentException))]
         public void ExcelWorksheetRenameWithStartApostropheThrowsException()
         {
             using (var package = new ExcelPackage())
             {
                 var sheet1 = package.Workbook.Worksheets.Add("Sheet1");
-                sheet1.Name = "'New Name";
+                Assert.Throws<ArgumentException>(() => sheet1.Name = "'New Name");
             }
         }
 
         [TestMethod]
-        [ExpectedException(typeof(ArgumentException))]
         public void ExcelWorksheetRenameWithEndApostropheThrowsException()
         {
             using (var package = new ExcelPackage())
             {
                 var sheet1 = package.Workbook.Worksheets.Add("Sheet1");
-                sheet1.Name = "New Name'";
+                Assert.Throws<ArgumentException>(() => sheet1.Name = "New Name'");
             }
         }
 

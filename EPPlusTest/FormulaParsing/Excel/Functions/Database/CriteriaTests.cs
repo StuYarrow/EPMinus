@@ -1,9 +1,4 @@
-﻿using System;
-using System.Linq;
-using Microsoft.VisualStudio.TestTools.UnitTesting;
-using OfficeOpenXml;
-using OfficeOpenXml.FormulaParsing;
-using OfficeOpenXml.FormulaParsing.Excel.Functions.Database;
+﻿using OfficeOpenXml.FormulaParsing.Excel.Functions.Database;
 
 namespace EPPlusTest.FormulaParsing.Excel.Functions.Database
 {

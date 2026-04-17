@@ -1,13 +1,5 @@
 ﻿using System;
-using System.Text;
-using System.Collections.Generic;
-using System.Linq;
-using Microsoft.VisualStudio.TestTools.UnitTesting;
-using OfficeOpenXml.FormulaParsing;
-using FakeItEasy;
 using ExGraph = OfficeOpenXml.FormulaParsing.ExpressionGraph.ExpressionGraph;
-using OfficeOpenXml.FormulaParsing.LexicalAnalysis;
-using OfficeOpenXml.FormulaParsing.ExpressionGraph;
 
 namespace EPPlusTest.FormulaParsing
 {
@@ -99,10 +91,10 @@ namespace EPPlusTest.FormulaParsing
             Assert.AreEqual(3d, result);
         }
 
-        [TestMethod, ExpectedException(typeof(ArgumentException))]
+        [TestMethod]
         public void ParseAtShouldThrowIfAddressIsNull()
         {
-            _parser.ParseAt(null);
+            Assert.Throws<ArgumentException>(() => _parser.ParseAt(null));
         }
     }
 }

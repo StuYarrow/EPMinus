@@ -1,10 +1,5 @@
 ﻿using System;
-using System.Text;
-using System.Collections.Generic;
-using System.Linq;
-using Microsoft.VisualStudio.TestTools.UnitTesting;
 using OfficeOpenXml.DataValidation.Formulas.Contracts;
-using OfficeOpenXml.DataValidation;
 using OfficeOpenXml.DataValidation.Contracts;
 
 namespace EPPlusTest.DataValidation
@@ -43,10 +38,10 @@ namespace EPPlusTest.DataValidation
             Assert.AreEqual(1, _validation.Formula.Values.Count);
         }
 
-        [TestMethod, ExpectedException(typeof(InvalidOperationException))]
+        [TestMethod]
         public void ListDataValidation_ShouldThrowWhenNoFormulaOrValueIsSet()
         {
-            _validation.Validate();
+            Assert.Throws<InvalidOperationException>(() => _validation.Validate());
         }
     }
 }

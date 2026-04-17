@@ -1,15 +1,5 @@
 ﻿using System;
-using System.Text;
-using System.Collections.Generic;
-using System.Linq;
-using Microsoft.VisualStudio.TestTools.UnitTesting;
-using OfficeOpenXml.FormulaParsing;
-using OfficeOpenXml.FormulaParsing.Excel.Functions.Math;
-using OfficeOpenXml.FormulaParsing.ExcelUtilities;
-using EPPlusTest.FormulaParsing.TestHelpers;
 using OfficeOpenXml.FormulaParsing.Excel;
-using OfficeOpenXml;
-using OfficeOpenXml.FormulaParsing.Exceptions;
 
 namespace EPPlusTest.Excel.Functions
 {
@@ -25,12 +15,12 @@ namespace EPPlusTest.Excel.Functions
             _context.Scopes.NewScope(RangeAddress.Empty);
         }
 
-        [TestMethod, ExpectedException(typeof(ExcelErrorValueException))]
+        [TestMethod]
         public void ShouldThrowIfInvalidFuncNumber()
         {
             var func = new Subtotal();
             var args = FunctionsHelper.CreateArgs(139, 1);
-            func.Execute(args, _context);
+            Assert.Throws<ExcelErrorValueException>(() => func.Execute(args, _context));
         }
 
         [TestMethod]

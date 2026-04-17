@@ -1,13 +1,4 @@
-﻿using System;
-using System.Text;
-using System.Collections.Generic;
-using System.Linq;
-using Microsoft.VisualStudio.TestTools.UnitTesting;
-using OfficeOpenXml.DataValidation;
-using System.IO;
-using OfficeOpenXml;
-
-namespace EPPlusTest.DataValidation.IntegrationTests
+﻿namespace EPPlusTest.DataValidation.IntegrationTests
 {
     /// <summary>
     /// Remove the Ignore attributes from the testmethods if you want to run any of these tests

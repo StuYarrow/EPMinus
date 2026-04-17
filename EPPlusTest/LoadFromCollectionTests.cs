@@ -1,10 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.IO;
-using System.Linq;
 using System.Reflection;
-using Microsoft.VisualStudio.TestTools.UnitTesting;
-using OfficeOpenXml;
 using OfficeOpenXml.Table;
 
 namespace EPPlusTest
@@ -79,7 +74,6 @@ namespace EPPlusTest
             }
         }
         [TestMethod]
-        [ExpectedException(typeof(InvalidCastException))]
         public void ShouldThrowInvalidCastExceptionIf()
         {
             var objs = new List<BaseClass>()
@@ -90,9 +84,7 @@ namespace EPPlusTest
             using (var pck = new ExcelPackage(new MemoryStream()))
             {
                 var sheet = pck.Workbook.Worksheets.Add("sheet");
-                sheet.Cells["C1"].LoadFromCollection(items, true, TableStyles.Dark1, BindingFlags.Public | BindingFlags.Instance, typeof(string).GetMembers());
-
-                Assert.AreEqual("Id", sheet.Cells["C1"].Value);
+                Assert.Throws<InvalidCastException>(() => sheet.Cells["C1"].LoadFromCollection(items, true, TableStyles.Dark1, BindingFlags.Public | BindingFlags.Instance, typeof(string).GetMembers()));
             }
         }
     }

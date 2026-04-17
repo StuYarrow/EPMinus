@@ -1,6 +1,4 @@
-﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
-using OfficeOpenXml;
-using System.Xml;
+﻿using System.Xml;
 
 namespace EPPlusTest
 {

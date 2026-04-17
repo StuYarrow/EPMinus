@@ -1,10 +1,4 @@
 ﻿using System;
-using System.Text;
-using System.Collections.Generic;
-using System.Linq;
-using Microsoft.VisualStudio.TestTools.UnitTesting;
-using OfficeOpenXml.FormulaParsing.LexicalAnalysis;
-using OfficeOpenXml.FormulaParsing.Exceptions;
 
 namespace EPPlusTest.FormulaParsing.LexicalAnalysis
 {
@@ -33,7 +27,7 @@ namespace EPPlusTest.FormulaParsing.LexicalAnalysis
             _analyser.Analyze(input);
         }
 
-        [TestMethod, ExpectedException(typeof(FormatException))]
+        [TestMethod]
         public void ShouldThrowExceptionIfParenthesesAreNotWellformed()
         {
             var input = new List<Token>
@@ -43,7 +37,7 @@ namespace EPPlusTest.FormulaParsing.LexicalAnalysis
                 new Token("+", TokenType.Operator),
                 new Token("2", TokenType.Integer)
             };
-            _analyser.Analyze(input);
+            Assert.Throws<FormatException>(() => _analyser.Analyze(input));
         }
 
         [TestMethod]
@@ -58,7 +52,7 @@ namespace EPPlusTest.FormulaParsing.LexicalAnalysis
             _analyser.Analyze(input);
         }
 
-        [TestMethod, ExpectedException(typeof(FormatException))]
+        [TestMethod]
         public void ShouldThrowExceptionIfStringHasNotClosing()
         {
             var input = new List<Token>
@@ -66,18 +60,18 @@ namespace EPPlusTest.FormulaParsing.LexicalAnalysis
                 new Token("'", TokenType.String),
                 new Token("abc123", TokenType.StringContent)
             };
-            _analyser.Analyze(input);
+            Assert.Throws<FormatException>(() => _analyser.Analyze(input));
         }
 
 
-        [TestMethod, ExpectedException(typeof(UnrecognizedTokenException))]
+        [TestMethod]
         public void ShouldThrowExceptionIfThereIsAnUnrecognizedToken()
         {
             var input = new List<Token>
             {
                 new Token("abc123", TokenType.Unrecognized)
             };
-            _analyser.Analyze(input);
+            Assert.Throws<UnrecognizedTokenException>(() => _analyser.Analyze(input));
         }
     }
 }

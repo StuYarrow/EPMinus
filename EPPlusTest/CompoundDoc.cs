@@ -1,14 +1,7 @@
 ﻿using System;
-using System.Text;
-using System.Collections.Generic;
-using Microsoft.VisualStudio.TestTools.UnitTesting;
-using System.IO;
 using OfficeOpenXml.Utils;
-using OfficeOpenXml;
 using OfficeOpenXml.Utils.CompundDocument;
 using OfficeOpenXml.Style;
-using System.Drawing;
-using System.Linq;
 
 namespace EPPlusTest
 {

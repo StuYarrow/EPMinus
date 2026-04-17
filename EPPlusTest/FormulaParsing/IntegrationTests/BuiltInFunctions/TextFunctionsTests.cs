@@ -1,9 +1,5 @@
 ﻿using System;
 using System.Diagnostics;
-using System.IO;
-using System.Linq;
-using Microsoft.VisualStudio.TestTools.UnitTesting;
-using OfficeOpenXml;
 using OfficeOpenXml.FormulaParsing.Logging;
 
 namespace EPPlusTest.FormulaParsing.IntegrationTests.BuiltInFunctions

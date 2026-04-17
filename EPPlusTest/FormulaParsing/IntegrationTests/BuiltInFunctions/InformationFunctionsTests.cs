@@ -1,14 +1,4 @@
-﻿using System;
-using System.Text;
-using System.Collections.Generic;
-using System.Linq;
-using Microsoft.VisualStudio.TestTools.UnitTesting;
-using OfficeOpenXml;
-using FakeItEasy;
-using OfficeOpenXml.FormulaParsing;
-using OfficeOpenXml.FormulaParsing.Exceptions;
-
-namespace EPPlusTest.FormulaParsing.IntegrationTests.BuiltInFunctions
+﻿namespace EPPlusTest.FormulaParsing.IntegrationTests.BuiltInFunctions
 {
     [TestClass]
     public class InformationFunctionsTests : FormulaParserTestBase

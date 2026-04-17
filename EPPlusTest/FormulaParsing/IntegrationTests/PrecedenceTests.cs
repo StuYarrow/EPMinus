@@ -1,12 +1,4 @@
-﻿using System;
-using System.Text;
-using System.Collections.Generic;
-using System.Linq;
-using Microsoft.VisualStudio.TestTools.UnitTesting;
-using OfficeOpenXml.FormulaParsing;
-using FakeItEasy;
-
-namespace EPPlusTest.FormulaParsing.IntegrationTests
+﻿namespace EPPlusTest.FormulaParsing.IntegrationTests
 {
     [TestClass]
     public class PrecedenceTests : FormulaParserTestBase

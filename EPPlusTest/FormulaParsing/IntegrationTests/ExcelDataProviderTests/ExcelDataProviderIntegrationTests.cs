@@ -1,13 +1,4 @@
-﻿using System;
-using System.Text;
-using System.Collections.Generic;
-using System.Linq;
-using Microsoft.VisualStudio.TestTools.UnitTesting;
-using OfficeOpenXml.FormulaParsing;
-using OfficeOpenXml.FormulaParsing.Exceptions;
-using FakeItEasy;
-
-namespace EPPlusTest.FormulaParsing.IntegrationTests.ExcelDataProviderTests
+﻿namespace EPPlusTest.FormulaParsing.IntegrationTests.ExcelDataProviderTests
 {
     [TestClass]
     public class ExcelDataProviderIntegrationTests

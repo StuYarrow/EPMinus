@@ -1,7 +1,4 @@
 ﻿using System;
-using Microsoft.VisualStudio.TestTools.UnitTesting;
-using OfficeOpenXml;
-using System.IO;
 using System.Reflection;
 
 namespace EPPlusTest
@@ -11,8 +8,8 @@ namespace EPPlusTest
     {
         protected ExcelPackage _pck;
         protected string _clipartPath="";
-        protected string _worksheetPath= @"c:\epplusTest\Testoutput\";
-        protected string _testInputPath = @"c:\epplusTest\workbooks\";
+        protected string _worksheetPath= @"Testoutput";
+        protected string _testInputPath = @"workbooks";
         public TestContext TestContext { get; set; }
         
         [TestInitialize]
@@ -49,12 +46,12 @@ namespace EPPlusTest
                     }
                 }
             }
-            
+
             //_worksheetPath = Path.Combine(Path.GetTempPath(), @"EPPlus worksheets");
-            //if (!Directory.Exists(_worksheetPath))
-            //{
-            //    Directory.CreateDirectory(_worksheetPath);
-            //}
+            if (!Directory.Exists(_worksheetPath))
+            {
+                Directory.CreateDirectory(_worksheetPath);
+            }
             var di=new DirectoryInfo(_worksheetPath);            
             _worksheetPath = di.FullName + "\\";
 

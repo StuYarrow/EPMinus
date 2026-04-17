@@ -1,9 +1,4 @@
-﻿using System;
-using Microsoft.VisualStudio.TestTools.UnitTesting;
-using OfficeOpenXml;
-using OfficeOpenXml.FormulaParsing.Exceptions;
-
-namespace EPPlusTest.FormulaParsing.IntegrationTests
+﻿namespace EPPlusTest.FormulaParsing.IntegrationTests
 {
     [TestClass]
     public class OperatorsTests

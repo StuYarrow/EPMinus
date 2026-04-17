@@ -1,19 +1,14 @@
 ﻿using System;
-using System.Text;
-using System.Collections.Generic;
-using System.Linq;
-using Microsoft.VisualStudio.TestTools.UnitTesting;
-using OfficeOpenXml.FormulaParsing.ExcelUtilities;
 
 namespace EPPlusTest.ExcelUtilities
 {
     [TestClass]
     public class ExcelAddressInfoTests
     {
-        [TestMethod, ExpectedException(typeof(ArgumentException))]
+        [TestMethod]
         public void ParseShouldThrowIfAddressIsNull()
         {
-            ExcelAddressInfo.Parse(null);
+            Assert.Throws<ArgumentException>(() => ExcelAddressInfo.Parse(null));
         }
 
         [TestMethod]

@@ -1,13 +1,4 @@
-﻿using System;
-using System.Text;
-using System.Collections.Generic;
-using System.Linq;
-using Microsoft.VisualStudio.TestTools.UnitTesting;
-using OfficeOpenXml.FormulaParsing;
-using OfficeOpenXml.FormulaParsing.Excel.Functions.Information;
-using EPPlusTest.FormulaParsing.TestHelpers;
-using OfficeOpenXml.FormulaParsing.Exceptions;
-using OfficeOpenXml;
+﻿using OfficeOpenXml.FormulaParsing.Excel.Functions.Information;
 
 namespace EPPlusTest.Excel.Functions
 {

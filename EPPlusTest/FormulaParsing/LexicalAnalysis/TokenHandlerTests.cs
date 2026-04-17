@@ -1,9 +1,4 @@
-﻿using System;
-using Microsoft.VisualStudio.TestTools.UnitTesting;
-using OfficeOpenXml.FormulaParsing.LexicalAnalysis;
-using OfficeOpenXml.FormulaParsing;
-
-namespace EPPlusTest.FormulaParsing.LexicalAnalysis
+﻿namespace EPPlusTest.FormulaParsing.LexicalAnalysis
 {
     [TestClass]
     public class TokenHandlerTests

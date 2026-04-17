@@ -1,11 +1,4 @@
 ﻿using System;
-using System.Text;
-using System.Collections.Generic;
-using System.Linq;
-using Microsoft.VisualStudio.TestTools.UnitTesting;
-using FakeItEasy;
-using OfficeOpenXml.FormulaParsing.ExcelUtilities;
-using OfficeOpenXml.FormulaParsing;
 
 namespace EPPlusTest.ExcelUtilities
 {
@@ -23,10 +16,10 @@ namespace EPPlusTest.ExcelUtilities
             _factory = new RangeAddressFactory(provider);
         }
 
-        [TestMethod, ExpectedException(typeof(ArgumentException))]
+        [TestMethod]
         public void CreateShouldThrowIfSuppliedAddressIsNull()
         {
-            _factory.Create(null);
+            Assert.Throws<ArgumentException>(() => _factory.Create(null));
         }
 
         [TestMethod]

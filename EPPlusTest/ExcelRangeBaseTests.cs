@@ -1,7 +1,4 @@
-﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
-using OfficeOpenXml;
-
-namespace EPPlusTest
+﻿namespace EPPlusTest
 {
     [TestClass]
     public class ExcelRangeBaseTests : TestBase

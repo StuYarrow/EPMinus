@@ -1,10 +1,6 @@
 ﻿using System;
-using System.Drawing;
-using System.IO;
 using System.Xml;
 using EPPlusTest.Properties;
-using Microsoft.VisualStudio.TestTools.UnitTesting;
-using OfficeOpenXml;
 using OfficeOpenXml.Drawing;
 using OfficeOpenXml.Drawing.Chart;
 using OfficeOpenXml.Style;

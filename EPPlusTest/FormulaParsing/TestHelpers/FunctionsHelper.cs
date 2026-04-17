@@ -1,11 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using OfficeOpenXml.FormulaParsing;
-using OfficeOpenXml.FormulaParsing.Excel.Functions;
-
-namespace EPPlusTest.FormulaParsing.TestHelpers
+﻿namespace EPPlusTest.FormulaParsing.TestHelpers
 {
     public static class FunctionsHelper
     {

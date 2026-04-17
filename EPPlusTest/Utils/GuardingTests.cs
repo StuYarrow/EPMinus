@@ -1,8 +1,4 @@
 ﻿using System;
-using System.Text;
-using System.Collections.Generic;
-using System.Linq;
-using Microsoft.VisualStudio.TestTools.UnitTesting;
 using OfficeOpenXml.Utils;
 
 namespace EPPlusTest.Utils
@@ -15,11 +11,11 @@ namespace EPPlusTest.Utils
 
         }
 
-        [TestMethod, ExpectedException(typeof(ArgumentNullException))]
+        [TestMethod]
         public void Require_IsNotNull_ShouldThrowIfArgumentIsNull()
         {
             TestClass obj = null;
-            Require.Argument(obj).IsNotNull("test");
+            Assert.Throws<ArgumentNullException>(() => Require.Argument(obj).IsNotNull("test"));
         }
 
         [TestMethod]
@@ -29,11 +25,11 @@ namespace EPPlusTest.Utils
             Require.Argument(obj).IsNotNull("test");
         }
 
-        [TestMethod, ExpectedException(typeof(ArgumentNullException))]
+        [TestMethod]
         public void Require_IsNotNullOrEmpty_ShouldThrowIfStringIsNull()
         {
             string arg = null;
-            Require.Argument(arg).IsNotNullOrEmpty("test");
+            Assert.Throws<ArgumentNullException>(() => Require.Argument(arg).IsNotNullOrEmpty("test"));
         }
 
         [TestMethod]
@@ -43,11 +39,11 @@ namespace EPPlusTest.Utils
             Require.Argument(arg).IsNotNullOrEmpty("test");
         }
 
-        [TestMethod, ExpectedException(typeof(ArgumentOutOfRangeException))]
+        [TestMethod]
         public void Require_IsInRange_ShouldThrowIfArgumentIsOutOfRange()
         {
             int arg = 3;
-            Require.Argument(arg).IsInRange(5, 7, "test");
+            Assert.Throws<ArgumentOutOfRangeException>(() => Require.Argument(arg).IsInRange(5, 7, "test"));
         }
 
         [TestMethod]

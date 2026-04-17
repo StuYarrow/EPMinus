@@ -1,14 +1,4 @@
-﻿using System;
-using System.Text;
-using System.Collections.Generic;
-using System.Linq;
-using Microsoft.VisualStudio.TestTools.UnitTesting;
-using OfficeOpenXml.FormulaParsing;
-using OfficeOpenXml.FormulaParsing.LexicalAnalysis;
-using OfficeOpenXml.FormulaParsing.ExcelUtilities;
-using FakeItEasy;
-
-namespace EPPlusTest.ExcelUtilities
+﻿namespace EPPlusTest.ExcelUtilities
 {
     [TestClass]
     public class CellReferenceProviderTests

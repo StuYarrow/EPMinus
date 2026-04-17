@@ -1,11 +1,5 @@
 ﻿using System;
-using System.Text;
-using System.Collections.Generic;
-using System.Linq;
-using Microsoft.VisualStudio.TestTools.UnitTesting;
-using OfficeOpenXml;
-using OfficeOpenXml.DataValidation;
-using System.IO;
+using Microsoft.VisualStudio.TestPlatform.Common.Utilities;
 
 namespace EPPlusTest.DataValidation
 {
@@ -35,12 +29,12 @@ namespace EPPlusTest.DataValidation
             Assert.AreEqual(ExcelDataValidationOperator.greaterThanOrEqual, validation.Operator);
        }
 
-        [TestMethod, ExpectedException(typeof(InvalidOperationException))]
+        [TestMethod]
         public void DataValidations_ShouldThrowIfOperatorIsEqualAndFormula1IsEmpty()
         {
             var validations = _sheet.DataValidations.AddIntegerValidation("A1");
             validations.Operator = ExcelDataValidationOperator.equal;
-            validations.Validate();
+            Assert.Throws<InvalidOperationException>(validations.Validate);
         }
 
         [TestMethod]
@@ -109,13 +103,13 @@ namespace EPPlusTest.DataValidation
             Assert.AreEqual("ErrorTitle", validation.ErrorTitle);
         }
 
-        [TestMethod, ExpectedException(typeof(InvalidOperationException))]
+        [TestMethod]
         public void DataValidations_ShouldThrowIfOperatorIsBetweenAndFormula2IsEmpty()
         {
             var validation = _sheet.DataValidations.AddIntegerValidation("A1");
             validation.Formula.Value = 1;
             validation.Operator = ExcelDataValidationOperator.between;
-            validation.Validate();
+            Assert.Throws<InvalidOperationException>(validation.Validate);
         }
 
         [TestMethod]

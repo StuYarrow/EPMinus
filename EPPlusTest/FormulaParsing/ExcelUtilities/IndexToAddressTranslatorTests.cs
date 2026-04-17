@@ -1,11 +1,4 @@
 ﻿using System;
-using System.Text;
-using System.Collections.Generic;
-using System.Linq;
-using Microsoft.VisualStudio.TestTools.UnitTesting;
-using FakeItEasy;
-using OfficeOpenXml.FormulaParsing;
-using OfficeOpenXml.FormulaParsing.ExcelUtilities;
 
 namespace EPPlusTest.ExcelUtilities
 {
@@ -28,10 +21,10 @@ namespace EPPlusTest.ExcelUtilities
             _indexToAddressTranslator = new IndexToAddressTranslator(_excelDataProvider, refType);
         }
 
-        [TestMethod, ExpectedException(typeof(ArgumentNullException))]
+        [TestMethod]
         public void ShouldThrowIfExcelDataProviderIsNull()
         {
-            new IndexToAddressTranslator(null);
+            Assert.Throws<ArgumentNullException>(() => new IndexToAddressTranslator(null));
         }
 
         [TestMethod]
