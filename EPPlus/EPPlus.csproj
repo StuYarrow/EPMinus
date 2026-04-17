@@ -2,16 +2,14 @@
 
   <PropertyGroup>
     <TargetFrameworks>net10.0</TargetFrameworks>
-    <AssemblyVersion>5.0.0.0</AssemblyVersion>
-    <FileVersion>5.0.0.0</FileVersion>
-    <Version>5.0.0.0</Version>
-    <Product>EPPlus</Product>
+    <AssemblyTitle>EPMinus</AssemblyTitle>
     <Description>Create advanced Excel spreadsheets using .NET</Description>
-    <AssemblyName>EPPlus</AssemblyName>
-    <RootNamespace>EPPlus</RootNamespace>
-    <RepositoryUrl></RepositoryUrl>
+    <PackageId>EPMinus</PackageId>
+    <RepositoryUrl>https://github.com/StuYarrow/EPMinus</RepositoryUrl>
   </PropertyGroup>
 
+  <Import Project="..\GlobalAssemblyInfo.csproj" />
+  
   <PropertyGroup>
     <DefineConstants>Core</DefineConstants>
   </PropertyGroup>
@@ -31,10 +29,6 @@
     <PackageReference Include="System.Drawing.Common" Version="10.0.6" />
     <PackageReference Include="System.Security.Cryptography.Pkcs" Version="10.0.6" />
     <PackageReference Include="System.Xml.XPath.XmlDocument" Version="4.7.0" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <Folder Include="Properties\" />
   </ItemGroup>
   
 </Project>

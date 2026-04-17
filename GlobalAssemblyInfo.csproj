@@ -1,0 +1,27 @@
+﻿<Project>
+
+  <!-- Assembly metadata common to the whole solution -->
+  <PropertyGroup>
+    <ProductName>EPMinus</ProductName>
+    <Copyright>Copyright (C) Jan Källman 2020, Stuart Yarrow $([System.DateTime]::Today.Year.ToString())</Copyright>
+
+    <!-- Set major and minor version here -->
+    <!-- The GitHub build action accesses this file by a hardcoded path to read these tags -->
+    <MajorVersion>0</MajorVersion>
+    <MinorVersion>1</MinorVersion>
+    <!-- Build number is set by GitHub -->
+    <BuildNumber Condition="'$(BuildNumber)'==''">9999</BuildNumber>
+
+    <!-- Automatic version -->
+    <Version>$(MajorVersion).$(MinorVersion).$(BuildNumber)</Version>
+	  <AssemblyVersion>$(Version)</AssemblyVersion>
+    <InformationalVersion>$(Version)</InformationalVersion>
+
+    <!-- Needed to suppress git commit SHA with .NET 8 SDK -->
+    <IncludeSourceRevisionInInformationalVersion>false</IncludeSourceRevisionInInformationalVersion>
+  </PropertyGroup>
+
+</Project>
+
+
+
