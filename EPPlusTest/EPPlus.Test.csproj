@@ -1,0 +1,47 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>    
+    <TargetFramework>net10.0</TargetFramework>    
+    <RootNamespace>EPPlusTest</RootNamespace>    
+    <AssemblyName>EPPlusTest</AssemblyName>    
+    <AssemblyVersion>5.0.0.0</AssemblyVersion>    
+    <FileVersion>5.0.0.0</FileVersion>    
+    <Version>5.0.0.0</Version>    
+  </PropertyGroup>
+
+  <PropertyGroup>
+    <DefineConstants>Core</DefineConstants>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="Resources\BitmapImage.gif" />
+    <None Remove="Resources\Test1.jpg" />
+    <None Remove="Resources\Vector Drawing.wmf" />
+    <None Remove="Resources\Vector Drawing2.wmf" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Include="Resources\BitmapImage.gif" />
+    <EmbeddedResource Include="Resources\Test1.jpg" />
+    <EmbeddedResource Include="Resources\Vector Drawing.wmf" />
+    <EmbeddedResource Include="Resources\Vector Drawing2.wmf" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="FakeItEasy" Version="9.0.1" />
+    <PackageReference Include="Microsoft.NET.Test.Sdk" Version="18.4.0" />
+    <PackageReference Include="MSTest.TestAdapter" Version="4.2.1" />
+    <PackageReference Include="MSTest.TestFramework" Version="4.2.1" />
+    <PackageReference Include="System.Resources.Extensions" Version="10.0.6" />
+    <PackageReference Include="System.Xml.XPath.XmlDocument" Version="4.7.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\EPPlus\EPPlus.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Service Include="{82a7f48d-3b50-4b1e-b82e-3ada8210c358}" />
+  </ItemGroup>
+
+</Project>
