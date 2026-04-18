@@ -47,9 +47,7 @@ using System.Configuration;
 using OfficeOpenXml.Compatibility;
 using System.Text;
 using Microsoft.Extensions.Configuration;
-#if (Core)
-using Microsoft.Extensions.Configuration;
-#endif
+
 namespace OfficeOpenXml
 {
     /// <summary>

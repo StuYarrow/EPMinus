@@ -1,11 +1,12 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-    <TargetFrameworks>net10.0-windows10.0.19041.0</TargetFrameworks>
+    <TargetFrameworks>netstandard2.1</TargetFrameworks>
     <AssemblyTitle>EPMinus</AssemblyTitle>
     <Description>Create advanced Excel spreadsheets using .NET</Description>
     <PackageId>StuYarrow.EPMinus</PackageId>
     <RepositoryUrl>https://github.com/StuYarrow/EPMinus</RepositoryUrl>
+    <PackageLicenseFile>../lgpl-3.0.txt</PackageLicenseFile>
   </PropertyGroup>
 
   <Import Project="..\GlobalAssemblyInfo.csproj" />
@@ -28,7 +29,7 @@
     <PackageReference Include="Microsoft.Extensions.Configuration.Json" Version="10.0.6" />
     <PackageReference Include="System.Drawing.Common" Version="10.0.6" />
     <PackageReference Include="System.Security.Cryptography.Pkcs" Version="10.0.6" />
-    <PackageReference Include="System.Xml.XPath.XmlDocument" Version="4.7.0" />
+    <PackageReference Include="System.Text.Encoding.CodePages" Version="10.0.6" />
   </ItemGroup>
   
 </Project>

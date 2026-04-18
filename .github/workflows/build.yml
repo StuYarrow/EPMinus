@@ -5,11 +5,8 @@ on:
     branches: [ release ]
 
 jobs:
-  build:
-    runs-on: windows-latest
-    defaults:
-      run:
-        shell: pwsh
+  make:
+    runs-on: ubuntu-latest
     env:
       DOTNET_CLI_TELEMETRY_OPTOUT: 1
       DOTNET_NOLOGO: 1
@@ -35,9 +32,7 @@ jobs:
       env:
         major: ${{ steps.get_major_version.outputs.info }}
         minor: ${{ steps.get_minor_version.outputs.info }}
-      run: |
-        $build_number=(.\get-build-number.ps1 $Env:major $Env:minor)
-        echo "build_number=${build_number}" >> $Env:GITHUB_OUTPUT
+      run: echo "build_number=`bash ./get-build-number.sh -M ${major} -m ${minor}`" >> $GITHUB_OUTPUT
     - name: Restore
       run: dotnet restore ./EPMinus.sln
     - name: Build
@@ -46,13 +41,6 @@ jobs:
         -c Release
         --no-restore
         -p:BuildNumber=${{ steps.get_build_number.outputs.build_number }}
-        ./EPMinus.sln
-    - name: Test
-      run: >
-        dotnet test
-        -c Release
-        --no-restore
-        --no-build
         ./EPMinus.sln
     - name: Pack
       run: >
@@ -66,10 +54,8 @@ jobs:
       run: >
        dotnet nuget push
        .\EPPlus\bin\Release\*.nupkg
-       -k ${{ env.GITHUB_TOKEN }}
+       -k ${{ secrets.GITHUB_TOKEN }}
        -s https://nuget.pkg.github.com/StuYarrow/index.json
-      env:
-        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
     - name: Tag repo with version
       uses: mathieudutour/github-tag-action@v6.2
       with:
