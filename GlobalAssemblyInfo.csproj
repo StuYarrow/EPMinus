@@ -7,8 +7,8 @@
 
     <!-- Set major and minor version here -->
     <!-- The GitHub build action accesses this file by a hardcoded path to read these tags -->
-    <MajorVersion>0</MajorVersion>
-    <MinorVersion>1</MinorVersion>
+    <MajorVersion>4</MajorVersion>
+    <MinorVersion>6</MinorVersion>
     <!-- Build number is set by GitHub -->
     <BuildNumber Condition="'$(BuildNumber)'==''">9999</BuildNumber>
 
