@@ -66,7 +66,7 @@ jobs:
       run: >
        dotnet nuget push
        .\EPPlus\bin\Release\*.nupkg
-       -k ${GITHUB_TOKEN}
+       -k ${{ env.GITHUB_TOKEN }}
        -s https://nuget.pkg.github.com/StuYarrow/index.json
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
