@@ -1,4 +1,8 @@
 ﻿using System;
+using System.Collections.Generic;
+using Microsoft.VisualStudio.TestTools.UnitTesting;
+using OfficeOpenXml.FormulaParsing.Exceptions;
+using OfficeOpenXml.FormulaParsing.LexicalAnalysis;
 
 namespace EPPlusTest.FormulaParsing.LexicalAnalysis
 {

@@ -1,4 +1,6 @@
-﻿using OfficeOpenXml.Utils;
+﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
+using OfficeOpenXml;
+using OfficeOpenXml.Utils;
 
 namespace EPPlusTest.Utils
 {

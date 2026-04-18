@@ -1,4 +1,8 @@
 ﻿using System;
+using FakeItEasy;
+using Microsoft.VisualStudio.TestTools.UnitTesting;
+using OfficeOpenXml.FormulaParsing;
+using OfficeOpenXml.FormulaParsing.ExcelUtilities;
 
 namespace EPPlusTest.FormulaParsing
 {

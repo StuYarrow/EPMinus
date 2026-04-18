@@ -1,4 +1,7 @@
-﻿namespace EPPlusTest.FormulaParsing
+﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
+using OfficeOpenXml.FormulaParsing;
+
+namespace EPPlusTest.FormulaParsing
 {
     [TestClass]
     public class ExcelAddressCacheTests

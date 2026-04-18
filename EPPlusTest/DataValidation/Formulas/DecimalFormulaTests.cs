@@ -1,5 +1,7 @@
 ﻿using OfficeOpenXml.DataValidation.Formulas;
 using System.Xml;
+using Microsoft.VisualStudio.TestTools.UnitTesting;
+using OfficeOpenXml.DataValidation;
 
 namespace EPPlusTest.DataValidation.Formulas
 {

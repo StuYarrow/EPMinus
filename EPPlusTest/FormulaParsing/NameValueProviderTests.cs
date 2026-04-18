@@ -1,4 +1,6 @@
-﻿namespace EPPlusTest.FormulaParsing
+﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
+
+namespace EPPlusTest.FormulaParsing
 {
     [TestClass]
     public class NameValueProviderTests

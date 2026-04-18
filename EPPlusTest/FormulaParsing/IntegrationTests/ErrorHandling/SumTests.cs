@@ -1,4 +1,6 @@
-﻿namespace EPPlusTest.FormulaParsing.IntegrationTests.ErrorHandling
+﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
+
+namespace EPPlusTest.FormulaParsing.IntegrationTests.ErrorHandling
 {
     /// <summary>
     /// Summary description for SumTests

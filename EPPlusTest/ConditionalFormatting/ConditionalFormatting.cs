@@ -1,4 +1,8 @@
-﻿using OfficeOpenXml.ConditionalFormatting;
+﻿using System.Drawing;
+using System.IO;
+using Microsoft.VisualStudio.TestTools.UnitTesting;
+using OfficeOpenXml;
+using OfficeOpenXml.ConditionalFormatting;
 using OfficeOpenXml.ConditionalFormatting.Contracts;
 
 namespace EPPlusTest

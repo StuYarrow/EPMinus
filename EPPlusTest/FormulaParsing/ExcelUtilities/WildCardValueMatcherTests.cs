@@ -1,4 +1,7 @@
-﻿namespace EPPlusTest.ExcelUtilities
+﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
+using OfficeOpenXml.FormulaParsing.ExcelUtilities;
+
+namespace EPPlusTest.ExcelUtilities
 {
     [TestClass]
     public class WildCardValueMatcherTests

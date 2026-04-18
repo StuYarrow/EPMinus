@@ -1,4 +1,6 @@
 ﻿using System;
+using Microsoft.VisualStudio.TestTools.UnitTesting;
+using OfficeOpenXml;
 using OfficeOpenXml.Sparkline;
 
 namespace EPPlusTest

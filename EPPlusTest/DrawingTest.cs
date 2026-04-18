@@ -5,7 +5,11 @@ using OfficeOpenXml.Drawing;
 using OfficeOpenXml.Drawing.Chart;
 using OfficeOpenXml.Style;
 using System.Diagnostics;
+using System.Drawing;
+using System.IO;
 using System.Reflection;
+using Microsoft.VisualStudio.TestTools.UnitTesting;
+using OfficeOpenXml;
 
 namespace EPPlusTest
 {

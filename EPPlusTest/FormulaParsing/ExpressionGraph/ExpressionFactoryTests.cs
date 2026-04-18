@@ -1,4 +1,10 @@
-﻿namespace EPPlusTest.FormulaParsing.ExpressionGraph
+﻿using FakeItEasy;
+using Microsoft.VisualStudio.TestTools.UnitTesting;
+using OfficeOpenXml.FormulaParsing;
+using OfficeOpenXml.FormulaParsing.ExpressionGraph;
+using OfficeOpenXml.FormulaParsing.LexicalAnalysis;
+
+namespace EPPlusTest.FormulaParsing.ExpressionGraph
 {
     [TestClass]
     public class ExpressionFactoryTests

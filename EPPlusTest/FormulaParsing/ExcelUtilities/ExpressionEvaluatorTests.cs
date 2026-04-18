@@ -1,6 +1,8 @@
 ﻿//using System.Diagnostics.Design;
 
 using System;
+using Microsoft.VisualStudio.TestTools.UnitTesting;
+using OfficeOpenXml.FormulaParsing.ExcelUtilities;
 
 namespace EPPlusTest
 {

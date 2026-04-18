@@ -1,4 +1,8 @@
-﻿using OfficeOpenXml.FormulaParsing.Excel.Functions.Text;
+﻿using EPPlusTest.FormulaParsing.TestHelpers;
+using Microsoft.VisualStudio.TestTools.UnitTesting;
+using OfficeOpenXml.FormulaParsing;
+using OfficeOpenXml.FormulaParsing.Excel.Functions.Text;
+using OfficeOpenXml.FormulaParsing.ExpressionGraph;
 
 namespace EPPlusTest.Excel.Functions.Text
 {

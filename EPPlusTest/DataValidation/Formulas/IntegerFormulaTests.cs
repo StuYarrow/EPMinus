@@ -1,4 +1,7 @@
-﻿namespace EPPlusTest.DataValidation.Formulas
+﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
+using OfficeOpenXml.DataValidation;
+
+namespace EPPlusTest.DataValidation.Formulas
 {
     [TestClass]
     public class IntegerFormulaTests : ValidationTestBase

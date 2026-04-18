@@ -1,4 +1,9 @@
-﻿namespace EPPlusTest.ExcelUtilities
+﻿using FakeItEasy;
+using Microsoft.VisualStudio.TestTools.UnitTesting;
+using OfficeOpenXml.FormulaParsing;
+using OfficeOpenXml.FormulaParsing.ExcelUtilities;
+
+namespace EPPlusTest.ExcelUtilities
 {
     [TestClass]
     public class RangeAddressTests

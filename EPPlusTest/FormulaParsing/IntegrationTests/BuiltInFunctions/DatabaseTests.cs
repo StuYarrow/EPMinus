@@ -1,4 +1,7 @@
-﻿namespace EPPlusTest.FormulaParsing.IntegrationTests.BuiltInFunctions
+﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
+using OfficeOpenXml;
+
+namespace EPPlusTest.FormulaParsing.IntegrationTests.BuiltInFunctions
 {
     [TestClass]
     public class DatabaseTests

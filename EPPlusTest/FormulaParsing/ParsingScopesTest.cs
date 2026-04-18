@@ -1,4 +1,9 @@
-﻿namespace EPPlusTest.FormulaParsing
+﻿using FakeItEasy;
+using Microsoft.VisualStudio.TestTools.UnitTesting;
+using OfficeOpenXml.FormulaParsing;
+using OfficeOpenXml.FormulaParsing.ExcelUtilities;
+
+namespace EPPlusTest.FormulaParsing
 {
     [TestClass]
     public class ParsingScopesTest

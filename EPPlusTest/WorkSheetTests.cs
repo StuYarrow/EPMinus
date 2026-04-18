@@ -1,11 +1,19 @@
 ﻿using System;
+using System.Collections.Generic;
 using OfficeOpenXml.Drawing;
 using OfficeOpenXml.Drawing.Chart;
 using OfficeOpenXml.Drawing.Vml;
 using OfficeOpenXml.Style;
 using System.Data;
+using System.Drawing;
+using System.Globalization;
+using System.IO;
+using System.Linq;
 using OfficeOpenXml.Table.PivotTable;
 using System.Reflection;
+using System.Threading;
+using Microsoft.VisualStudio.TestTools.UnitTesting;
+using OfficeOpenXml;
 using OfficeOpenXml.Table;
 
 namespace EPPlusTest

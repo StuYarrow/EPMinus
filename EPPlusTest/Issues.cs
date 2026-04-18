@@ -1,13 +1,22 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.Diagnostics;
 using System.Reflection;
 using OfficeOpenXml.FormulaParsing.Logging;
 using OfficeOpenXml.Style;
 using System.Data;
+using System.Drawing;
 using OfficeOpenXml.Table;
 using OfficeOpenXml.Table.PivotTable;
 using OfficeOpenXml.Drawing.Chart;
 using System.Dynamic;
+using System.Globalization;
+using System.IO;
+using System.Linq;
+using System.Text;
+using System.Threading;
+using Microsoft.VisualStudio.TestTools.UnitTesting;
+using OfficeOpenXml;
 using OfficeOpenXml.Drawing;
 
 namespace EPPlusTest

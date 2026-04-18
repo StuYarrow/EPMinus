@@ -1,4 +1,6 @@
-﻿namespace EPPlusTest.FormulaParsing.ExpressionGraph
+﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
+
+namespace EPPlusTest.FormulaParsing.ExpressionGraph
 {
     [TestClass]
     public class CompileResultFactoryTests

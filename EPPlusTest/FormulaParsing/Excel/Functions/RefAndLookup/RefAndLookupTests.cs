@@ -1,5 +1,14 @@
 ﻿using System;
+using System.Linq;
+using EPPlusTest.FormulaParsing.TestHelpers;
+using FakeItEasy;
+using Microsoft.VisualStudio.TestTools.UnitTesting;
+using OfficeOpenXml;
+using OfficeOpenXml.FormulaParsing;
+using OfficeOpenXml.FormulaParsing.Excel.Functions;
 using OfficeOpenXml.FormulaParsing.Excel.Functions.RefAndLookup;
+using OfficeOpenXml.FormulaParsing.ExcelUtilities;
+using OfficeOpenXml.FormulaParsing.ExpressionGraph;
 using AddressFunction = OfficeOpenXml.FormulaParsing.Excel.Functions.RefAndLookup.Address;
 using static OfficeOpenXml.FormulaParsing.EpplusExcelDataProvider;
 

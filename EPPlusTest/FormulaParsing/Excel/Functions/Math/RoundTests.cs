@@ -1,4 +1,9 @@
-﻿namespace EPPlusTest.FormulaParsing.Excel.Functions.Math
+﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
+using OfficeOpenXml.FormulaParsing;
+using OfficeOpenXml.FormulaParsing.Excel.Functions;
+using OfficeOpenXml.FormulaParsing.Excel.Functions.Math;
+
+namespace EPPlusTest.FormulaParsing.Excel.Functions.Math
 {
 	[TestClass]
 	public class RoundTests

@@ -1,4 +1,6 @@
-﻿namespace EPPlusTest.DataValidation
+﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
+
+namespace EPPlusTest.DataValidation
 {
     [TestClass]
     public class RangeBaseTests : ValidationTestBase

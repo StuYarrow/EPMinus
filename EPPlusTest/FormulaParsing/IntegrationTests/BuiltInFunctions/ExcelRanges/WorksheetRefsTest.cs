@@ -1,4 +1,7 @@
-﻿namespace EPPlusTest.FormulaParsing.IntegrationTests.BuiltInFunctions.ExcelRanges
+﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
+using OfficeOpenXml;
+
+namespace EPPlusTest.FormulaParsing.IntegrationTests.BuiltInFunctions.ExcelRanges
 {
     [TestClass]
     public class WorksheetRefsTest

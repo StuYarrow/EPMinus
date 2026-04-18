@@ -1,4 +1,10 @@
-﻿using OfficeOpenXml.FormulaParsing.Excel.Functions.Logical;
+﻿using System.IO;
+using System.Linq;
+using EPPlusTest.FormulaParsing.TestHelpers;
+using Microsoft.VisualStudio.TestTools.UnitTesting;
+using OfficeOpenXml;
+using OfficeOpenXml.FormulaParsing;
+using OfficeOpenXml.FormulaParsing.Excel.Functions.Logical;
 
 namespace EPPlusTest.Excel.Functions
 {

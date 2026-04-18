@@ -1,4 +1,8 @@
-﻿namespace EPPlusTest.FormulaParsing.IntegrationTests.BuiltInFunctions
+﻿using FakeItEasy;
+using Microsoft.VisualStudio.TestTools.UnitTesting;
+using OfficeOpenXml.FormulaParsing;
+
+namespace EPPlusTest.FormulaParsing.IntegrationTests.BuiltInFunctions
 {
     [TestClass]
     public class LogicalFunctionsTests : FormulaParserTestBase

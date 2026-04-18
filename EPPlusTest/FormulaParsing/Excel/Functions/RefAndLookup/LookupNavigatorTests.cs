@@ -1,4 +1,10 @@
-﻿using OfficeOpenXml.FormulaParsing.Excel.Functions.RefAndLookup;
+﻿using EPPlusTest.FormulaParsing.TestHelpers;
+using FakeItEasy;
+using Microsoft.VisualStudio.TestTools.UnitTesting;
+using OfficeOpenXml;
+using OfficeOpenXml.FormulaParsing;
+using OfficeOpenXml.FormulaParsing.Excel.Functions.RefAndLookup;
+using OfficeOpenXml.FormulaParsing.ExcelUtilities;
 
 namespace EPPlusTest.Excel.Functions.RefAndLookup
 {

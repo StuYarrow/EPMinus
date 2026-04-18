@@ -1,4 +1,7 @@
-﻿namespace EPPlusTest.FormulaParsing.TestHelpers
+﻿using System.Collections.Generic;
+using OfficeOpenXml.FormulaParsing.Excel.Functions;
+
+namespace EPPlusTest.FormulaParsing.TestHelpers
 {
     public static class FunctionsHelper
     {

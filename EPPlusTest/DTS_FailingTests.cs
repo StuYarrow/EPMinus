@@ -1,4 +1,8 @@
-﻿namespace EPPlusTest
+﻿using System.IO;
+using Microsoft.VisualStudio.TestTools.UnitTesting;
+using OfficeOpenXml;
+
+namespace EPPlusTest
 {
     [TestClass]
     public class DTS_FailingTests

@@ -1,7 +1,12 @@
 ﻿using System;
+using System.Collections.Generic;
+using System.IO;
 using OfficeOpenXml.Utils;
 using System.Security.Cryptography.X509Certificates;
 using System.Security.Cryptography;
+using System.Text;
+using Microsoft.VisualStudio.TestTools.UnitTesting;
+using OfficeOpenXml;
 using OfficeOpenXml.VBA;
 
 namespace EPPlusTest

@@ -1,4 +1,11 @@
-﻿namespace EPPlusTest.ExcelUtilities
+﻿using System.Linq;
+using FakeItEasy;
+using Microsoft.VisualStudio.TestTools.UnitTesting;
+using OfficeOpenXml.FormulaParsing;
+using OfficeOpenXml.FormulaParsing.ExcelUtilities;
+using OfficeOpenXml.FormulaParsing.LexicalAnalysis;
+
+namespace EPPlusTest.ExcelUtilities
 {
     [TestClass]
     public class CellReferenceProviderTests

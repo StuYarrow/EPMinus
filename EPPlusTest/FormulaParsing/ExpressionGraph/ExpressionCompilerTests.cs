@@ -1,5 +1,8 @@
-﻿using ExpGraph = OfficeOpenXml.FormulaParsing.ExpressionGraph.ExpressionGraph;
+﻿using System.Linq;
+using Microsoft.VisualStudio.TestTools.UnitTesting;
+using ExpGraph = OfficeOpenXml.FormulaParsing.ExpressionGraph.ExpressionGraph;
 using OfficeOpenXml.FormulaParsing.Excel.Operators;
+using OfficeOpenXml.FormulaParsing.ExpressionGraph;
 
 namespace EPPlusTest.FormulaParsing.ExpressionGraph
 {

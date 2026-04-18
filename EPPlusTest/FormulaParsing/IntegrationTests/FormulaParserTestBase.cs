@@ -1,4 +1,6 @@
-﻿namespace EPPlusTest.FormulaParsing.IntegrationTests
+﻿using OfficeOpenXml.FormulaParsing;
+
+namespace EPPlusTest.FormulaParsing.IntegrationTests
 {
     public abstract class FormulaParserTestBase
     {

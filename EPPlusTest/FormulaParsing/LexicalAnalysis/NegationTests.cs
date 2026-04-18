@@ -1,4 +1,9 @@
-﻿namespace EPPlusTest.FormulaParsing.LexicalAnalysis
+﻿using System.Linq;
+using Microsoft.VisualStudio.TestTools.UnitTesting;
+using OfficeOpenXml.FormulaParsing;
+using OfficeOpenXml.FormulaParsing.LexicalAnalysis;
+
+namespace EPPlusTest.FormulaParsing.LexicalAnalysis
 {
     [TestClass]
     public class NegationTests

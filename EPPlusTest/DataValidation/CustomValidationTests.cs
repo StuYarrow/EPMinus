@@ -1,4 +1,6 @@
 ﻿using System;
+using System.Text;
+using Microsoft.VisualStudio.TestTools.UnitTesting;
 
 namespace EPPlusTest.DataValidation
 {

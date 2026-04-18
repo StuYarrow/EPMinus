@@ -1,4 +1,7 @@
-﻿using OfficeOpenXml.Style;
+﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
+using OfficeOpenXml;
+using OfficeOpenXml.FormulaParsing.ExcelUtilities;
+using OfficeOpenXml.Style;
 
 namespace EPPlusTest
 {

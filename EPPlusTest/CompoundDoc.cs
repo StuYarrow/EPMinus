@@ -1,4 +1,9 @@
 ﻿using System;
+using System.Drawing;
+using System.IO;
+using System.Linq;
+using Microsoft.VisualStudio.TestTools.UnitTesting;
+using OfficeOpenXml;
 using OfficeOpenXml.Utils;
 using OfficeOpenXml.Utils.CompundDocument;
 using OfficeOpenXml.Style;

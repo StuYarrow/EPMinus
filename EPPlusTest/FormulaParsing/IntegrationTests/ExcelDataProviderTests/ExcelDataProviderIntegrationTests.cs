@@ -1,4 +1,7 @@
-﻿namespace EPPlusTest.FormulaParsing.IntegrationTests.ExcelDataProviderTests
+﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
+using OfficeOpenXml.FormulaParsing;
+
+namespace EPPlusTest.FormulaParsing.IntegrationTests.ExcelDataProviderTests
 {
     [TestClass]
     public class ExcelDataProviderIntegrationTests

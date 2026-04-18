@@ -1,4 +1,8 @@
-﻿namespace EPPlusTest.FormulaParsing.IntegrationTests
+﻿using FakeItEasy;
+using Microsoft.VisualStudio.TestTools.UnitTesting;
+using OfficeOpenXml.FormulaParsing;
+
+namespace EPPlusTest.FormulaParsing.IntegrationTests
 {
     [TestClass]
     public class PrecedenceTests : FormulaParserTestBase

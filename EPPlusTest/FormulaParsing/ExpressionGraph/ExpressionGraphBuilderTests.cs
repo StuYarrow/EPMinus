@@ -1,5 +1,12 @@
-﻿using OfficeOpenXml.FormulaParsing.ExpressionGraph.CompileStrategy;
+﻿using System.Collections.Generic;
+using System.Linq;
+using FakeItEasy;
+using Microsoft.VisualStudio.TestTools.UnitTesting;
+using OfficeOpenXml.FormulaParsing;
+using OfficeOpenXml.FormulaParsing.ExpressionGraph.CompileStrategy;
 using OfficeOpenXml.FormulaParsing.Excel.Operators;
+using OfficeOpenXml.FormulaParsing.ExpressionGraph;
+using OfficeOpenXml.FormulaParsing.LexicalAnalysis;
 
 namespace EPPlusTest.FormulaParsing.ExpressionGraph
 {

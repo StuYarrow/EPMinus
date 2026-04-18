@@ -1,4 +1,12 @@
 ﻿using System;
+using System.IO;
+using System.Linq;
+using FakeItEasy;
+using Microsoft.VisualStudio.TestTools.UnitTesting;
+using OfficeOpenXml;
+using OfficeOpenXml.FormulaParsing;
+using OfficeOpenXml.FormulaParsing.ExcelUtilities;
+using OfficeOpenXml.FormulaParsing.ExpressionGraph;
 
 namespace EPPlusTest.FormulaParsing.ExpressionGraph
 {
