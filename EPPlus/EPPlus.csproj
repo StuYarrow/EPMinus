@@ -4,7 +4,7 @@
     <TargetFrameworks>net10.0-windows10.0.19041.0</TargetFrameworks>
     <AssemblyTitle>EPMinus</AssemblyTitle>
     <Description>Create advanced Excel spreadsheets using .NET</Description>
-    <PackageId>EPMinus</PackageId>
+    <PackageId>StuYarrow.EPMinus</PackageId>
     <RepositoryUrl>https://github.com/StuYarrow/EPMinus</RepositoryUrl>
   </PropertyGroup>
 
