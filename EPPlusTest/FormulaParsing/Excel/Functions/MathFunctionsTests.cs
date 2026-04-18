@@ -1081,28 +1081,28 @@ namespace EPPlusTest.Excel.Functions
 
                 w.Calculate();
 
-                Assert.AreEqual(w.GetValue(1, 2), 4D);
-                Assert.AreEqual(w.GetValue(1, 3), 1D);
-                Assert.AreEqual(w.GetValue(1, 4), 4.5D);
-                Assert.AreEqual(w.GetValue(1, 5), 1.5D);
+                Assert.AreEqual(4D, w.GetValue(1, 2));
+                Assert.AreEqual(1D, w.GetValue(1, 3));
+                Assert.AreEqual(4.5D, w.GetValue(1, 4));
+                Assert.AreEqual(1.5D, w.GetValue(1, 5));
 
-                Assert.AreEqual(w.GetValue(2, 2), 2D);
-                Assert.AreEqual(w.GetValue(2, 3), 3D);
-                Assert.AreEqual(w.GetValue(2, 4), 3.5D);
-                Assert.AreEqual(w.GetValue(2, 5), 2.5D);
+                Assert.AreEqual(2D, w.GetValue(2, 2));
+                Assert.AreEqual(3D, w.GetValue(2, 3));
+                Assert.AreEqual(3.5D, w.GetValue(2, 4));
+                Assert.AreEqual(2.5D, w.GetValue(2, 5));
 
                 Assert.IsInstanceOfType(w.GetValue(3, 2), typeof(ExcelErrorValue));
                 Assert.IsInstanceOfType(w.GetValue(3, 3), typeof(ExcelErrorValue));
                 Assert.IsInstanceOfType(w.GetValue(3, 4), typeof(ExcelErrorValue));
                 Assert.IsInstanceOfType(w.GetValue(3, 5), typeof(ExcelErrorValue));
 
-                Assert.AreEqual(w.GetValue(4, 2), 1D);
-                Assert.AreEqual(w.GetValue(4, 3), 5D);
-                Assert.AreEqual(w.GetValue(4, 4), 5D);
-                Assert.AreEqual(w.GetValue(4, 5), 1D);
+                Assert.AreEqual(1D, w.GetValue(4, 2));
+                Assert.AreEqual(5D, w.GetValue(4, 3));
+                Assert.AreEqual(5D, w.GetValue(4, 4));
+                Assert.AreEqual(1D, w.GetValue(4, 5));
 
-                Assert.AreEqual(w.GetValue(5, 4), 5.5D);
-                Assert.AreEqual(w.GetValue(5, 5), 1.5D);
+                Assert.AreEqual(5.5D, w.GetValue(5, 4));
+                Assert.AreEqual(1.5D, w.GetValue(5, 5));
             }
         }
     }

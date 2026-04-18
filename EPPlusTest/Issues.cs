@@ -686,7 +686,7 @@ namespace EPPlusTest
                 foreach (var ws in p.Workbook.Worksheets)
                 {
                     ws.Cells[1023, 1, ws.Dimension.End.Row - 2, ws.Dimension.End.Column].Clear();
-                    Assert.AreNotEqual(ws.Dimension, null);
+                    Assert.AreNotEqual(null, ws.Dimension);
                 }
                 foreach (var cell in p.Workbook.Worksheets[2].Cells)
                 {
@@ -974,7 +974,7 @@ namespace EPPlusTest
             using (var exfile = new ExcelPackage(new FileInfo(@"c:\temp\bug\dotinname.xlsx")))
             {
                 var v = exfile.Workbook.Worksheets["sheet1.3"].Names["Test.Name"].Value;
-                Assert.AreEqual(v, 1);
+                Assert.AreEqual(1, v);
             }
         }
         [TestMethod, Ignore]
@@ -1106,7 +1106,7 @@ namespace EPPlusTest
             FileInfo file = new FileInfo(@"c:\temp\incorrect value.xlsx");
             using (ExcelPackage excelPackage = new ExcelPackage(file))
             {
-                Assert.AreEqual(excelPackage.Workbook.Worksheets[1].Cells["A1"].Value, 19120072);
+                Assert.AreEqual(19120072, excelPackage.Workbook.Worksheets[1].Cells["A1"].Value);
             }
         }
         [TestMethod, Ignore]
@@ -1115,7 +1115,7 @@ namespace EPPlusTest
             FileInfo file = new FileInfo(@"c:\temp\students.xlsx");
             using (ExcelPackage excelPackage = new ExcelPackage(file))
             {
-                Assert.AreNotEqual(((ExcelChart)excelPackage.Workbook.Worksheets[1].Drawings[0]).Series[0].XSeries, null);
+                Assert.AreNotEqual(null, ((ExcelChart)excelPackage.Workbook.Worksheets[1].Drawings[0]).Series[0].XSeries);
             }
         }
         [TestMethod, Ignore]
@@ -1164,7 +1164,7 @@ namespace EPPlusTest
                 var ws = p.Workbook.Worksheets.Add("Test");
                 var c = ws.Cells["A1"].Style.Font.Color;
                 c.Indexed = 3;
-                Assert.AreEqual(c.LookupColor(c), "#FF00FF00");
+                Assert.AreEqual("#FF00FF00", c.LookupColor(c));
             }
         }
         [TestMethod, Ignore]
@@ -1952,7 +1952,7 @@ namespace EPPlusTest
         {
             using (var p = new ExcelPackage(new FileInfo(@"C:\temp\bug\PivotTableTestCase.xlsx")))
             {
-                Assert.AreEqual(p.Workbook.Worksheets.Count, 2);
+                Assert.AreEqual(2, p.Workbook.Worksheets.Count);
                 p.SaveAs(new FileInfo(@"C:\temp\bug\PivotTableTestCaseSaved.xlsx"));
             }
         }
@@ -1961,7 +1961,7 @@ namespace EPPlusTest
         {
             using (var p = new ExcelPackage(new FileInfo(@"C:\temp\bug\test-Errorworkbook.xlsx")))
             {
-                Assert.AreEqual(p.Workbook.Worksheets.Count, 1);
+                Assert.AreEqual(1, p.Workbook.Worksheets.Count);
                 p.SaveAs(new FileInfo(@"C:\temp\bug\test-ErrorworkbookSaved.xlsx"));
             }
         }
@@ -1993,7 +1993,7 @@ namespace EPPlusTest
         {
             using (var pck = new ExcelPackage(new FileInfo($@"C:\temp\bug\issue176.xlsx")))
             {
-                Assert.AreEqual(Math.Round(pck.Workbook.Worksheets[1].Cells["A1"].Style.Fill.BackgroundColor.Tint, 5), -0.04999M);
+                Assert.AreEqual(-0.04999M, Math.Round(pck.Workbook.Worksheets[1].Cells["A1"].Style.Fill.BackgroundColor.Tint, 5));
                 pck.SaveAs(new FileInfo($@"C:\temp\bug\issue176-saved.xlsx"));
             }
         }
@@ -2010,7 +2010,7 @@ namespace EPPlusTest
                 txt += "\"022018\",\"1\",\"\"\r\n";
 
                 var range = sheet.Cells["A1"].LoadFromText(txt, format, TableStyles.None, true);
-                Assert.AreEqual(sheet.Cells["C2"].Value, null);
+                Assert.AreEqual(null, sheet.Cells["C2"].Value);
             }
         }
         [TestMethod, Ignore]
@@ -2149,7 +2149,7 @@ namespace EPPlusTest
             var name = a.WorkSheet;
 
             var a2 = new ExcelAddress("'Deal''s History'!a1:a3");
-            Assert.AreEqual(a2.WorkSheet, "Deal's History");
+            Assert.AreEqual("Deal's History", a2.WorkSheet);
             _pck.Save();
             _pck.Dispose();
 
@@ -2258,7 +2258,7 @@ namespace EPPlusTest
 
             Assert.AreEqual("Arial", boldStyle.Style.Font.Name);
             Assert.AreEqual(18, boldStyle.Style.Font.Size);
-            Assert.AreEqual(boldStyle.Style.Font.Color.Rgb, "FFFF0000");
+            Assert.AreEqual("FFFF0000", boldStyle.Style.Font.Color.Rgb);
 
             pkg.SaveAs(new FileInfo(@"c:\temp\n.xlsx"));
         }
@@ -2293,8 +2293,8 @@ namespace EPPlusTest
             ws = _pck.Workbook.Worksheets["DateFormat"];
             var pCulture = Thread.CurrentThread.CurrentCulture;
             Thread.CurrentThread.CurrentCulture = new CultureInfo("sv-Se");
-            Assert.AreEqual(ws.Cells["A1"].Text, "måndag 31 december 2018");
-            Assert.AreEqual(ws.GetValue<DateTime>(1, 1), new DateTime(2018, 12, 31));
+            Assert.AreEqual("måndag 31 december 2018", ws.Cells["A1"].Text);
+            Assert.AreEqual(new DateTime(2018, 12, 31), ws.GetValue<DateTime>(1, 1));
             Thread.CurrentThread.CurrentCulture = pCulture;
         }
         [TestMethod]

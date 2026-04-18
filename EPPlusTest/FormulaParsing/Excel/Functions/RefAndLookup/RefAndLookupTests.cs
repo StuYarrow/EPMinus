@@ -166,7 +166,7 @@ namespace EPPlusTest.Excel.Functions
 
             parsingContext.ExcelDataProvider = provider;
             var result = func.Execute(args, parsingContext);
-            Assert.AreEqual(result.DataType, DataType.ExcelError);
+            Assert.AreEqual(DataType.ExcelError, result.DataType);
         }
 
         [TestMethod]

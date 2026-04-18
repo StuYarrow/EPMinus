@@ -207,7 +207,7 @@ namespace EPPlusTest
             var package = new ExcelPackage(new FileInfo(@"c:\temp\cf2.xlsx"));
             var ws = package.Workbook.Worksheets[1];
             ws.Cells["A1"].Value = 1;
-            Assert.AreEqual(ws.ConditionalFormatting[6].Type, eExcelConditionalFormattingRuleType.Equal);
+            Assert.AreEqual(eExcelConditionalFormattingRuleType.Equal, ws.ConditionalFormatting[6].Type);
             package.SaveAs(new FileInfo(@"c:\temp\condFormTest.xlsx"));
         }
         [Ignore]
