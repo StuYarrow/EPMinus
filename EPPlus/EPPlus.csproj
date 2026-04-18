@@ -8,6 +8,17 @@
     <Authors>Jan Källman, Stu Yarrow</Authors>
     <RepositoryUrl>https://github.com/StuYarrow/EPMinus</RepositoryUrl>
     <PackageLicenseFile>lgpl-3.0.txt</PackageLicenseFile>
+    <PackageReleaseNotes>
+      # EPMinus
+
+      This is a fork of EPPlus v4.5.3.3, the last free version of EPPlus.
+      It targets netstandard2.1 only and the dependencies are updated, but it is otherwise essentially unmodified.
+      Much of the functionality is untested.
+
+      Visit https://github.com/JanKallman/EPPlus for tutorials, samples, and documentation.
+
+      **If you want the latest and best EPPlus, go and get the real thing from the original authors: https://github.com/EPPlusSoftware/EPPlus.**
+    </PackageReleaseNotes>
   </PropertyGroup>
 
   <Import Project="..\GlobalAssemblyInfo.csproj" />
