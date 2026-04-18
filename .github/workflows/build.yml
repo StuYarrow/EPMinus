@@ -34,14 +34,14 @@ jobs:
         minor: ${{ steps.get_minor_version.outputs.info }}
       run: echo "build_number=`bash ./get-build-number.sh -M ${major} -m ${minor}`" >> $GITHUB_OUTPUT
     - name: Restore
-      run: dotnet restore ./EPMinus.sln
+      run: dotnet restore ./EPPlus/EPPlus.csproj
     - name: Build
       run: >
         dotnet build
         -c Release
         --no-restore
         -p:BuildNumber=${{ steps.get_build_number.outputs.build_number }}
-        ./EPMinus.sln
+        ./EPPlus/EPPlus.csproj
     - name: Pack
       run: >
         dotnet pack
