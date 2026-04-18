@@ -31,5 +31,11 @@
     <PackageReference Include="System.Security.Cryptography.Pkcs" Version="10.0.6" />
     <PackageReference Include="System.Text.Encoding.CodePages" Version="10.0.6" />
   </ItemGroup>
+
+  <ItemGroup>
+    <None Update="lgpl-3.0.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
   
 </Project>
