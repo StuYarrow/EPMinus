@@ -3,17 +3,17 @@
   <PropertyGroup>
     <TargetFrameworks>netstandard2.1</TargetFrameworks>
     <AssemblyTitle>EPMinus</AssemblyTitle>
-    <Description>Create advanced Excel spreadsheets using .NET</Description>
+    <Description>
+      This is a fork of EPPlus v4.5.3.3, the last free version of EPPlus by Jan Källman.
+      It targets netstandard2.1 only and the dependencies are updated, but it is otherwise essentially unmodified.
+      Much of the functionality is untested.
+    </Description>
     <PackageId>StuYarrow.EPMinus</PackageId>
     <Authors>Jan Källman, Stu Yarrow</Authors>
     <RepositoryUrl>https://github.com/StuYarrow/EPMinus</RepositoryUrl>
     <PackageLicenseFile>lgpl-3.0.txt</PackageLicenseFile>
     <PackageReleaseNotes>
       # EPMinus
-
-      This is a fork of EPPlus v4.5.3.3, the last free version of EPPlus.
-      It targets netstandard2.1 only and the dependencies are updated, but it is otherwise essentially unmodified.
-      Much of the functionality is untested.
 
       Visit https://github.com/JanKallman/EPPlus for tutorials, samples, and documentation.
 
