@@ -33,9 +33,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <None Update="lgpl-3.0.txt">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </None>
+    <None Include="lgpl-3.0.txt" Pack="true" PackagePath="" />
   </ItemGroup>
   
 </Project>
