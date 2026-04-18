@@ -35,7 +35,9 @@ jobs:
       env:
         major: ${{ steps.get_major_version.outputs.info }}
         minor: ${{ steps.get_minor_version.outputs.info }}
-      run: echo "build_number=`bash ./get-build-number.sh -M ${major} -m ${minor}`" >> $GITHUB_OUTPUT
+      run: |
+        $build_number=(.\get-build-number.ps1 $Env:major $Env:minor)
+        echo "build_number=${build_number}" >> $Env:GITHUB_OUTPUT
     - name: Restore
       run: dotnet restore ./EPMinus.sln
     - name: Build
