@@ -5,6 +5,7 @@
     <AssemblyTitle>EPMinus</AssemblyTitle>
     <Description>Create advanced Excel spreadsheets using .NET</Description>
     <PackageId>StuYarrow.EPMinus</PackageId>
+    <Authors>Jan Källman, Stu Yarrow</Authors>
     <RepositoryUrl>https://github.com/StuYarrow/EPMinus</RepositoryUrl>
     <PackageLicenseFile>lgpl-3.0.txt</PackageLicenseFile>
   </PropertyGroup>
