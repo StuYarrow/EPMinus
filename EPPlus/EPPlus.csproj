@@ -6,7 +6,7 @@
     <Description>Create advanced Excel spreadsheets using .NET</Description>
     <PackageId>StuYarrow.EPMinus</PackageId>
     <RepositoryUrl>https://github.com/StuYarrow/EPMinus</RepositoryUrl>
-    <PackageLicenseFile>../lgpl-3.0.txt</PackageLicenseFile>
+    <PackageLicenseFile>lgpl-3.0.txt</PackageLicenseFile>
   </PropertyGroup>
 
   <Import Project="..\GlobalAssemblyInfo.csproj" />
