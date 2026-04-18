@@ -177,6 +177,7 @@ namespace EPPlusTest.Excel
 		[TestMethod]
 		public void OperatorsActingOnDateStrings()
 		{
+            Thread.CurrentThread.CurrentCulture = new CultureInfo("en-Gb");
             const string dateFormat = "dd-MM-yyyy";
             DateTime date1 = new DateTime(2015, 2, 20);
             DateTime date2 = new DateTime(2015, 12, 1);
