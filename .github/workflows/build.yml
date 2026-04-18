@@ -50,7 +50,12 @@ jobs:
         --no-build
         -p:BuildNumber=${{ steps.get_build_number.outputs.build_number }}
         ./EPPlus/EPPlus.csproj
-    - name: Push package
+    - name: Store package artifact
+      uses: actions/upload-artifact@v7
+      with:
+        path: ./EPPlus/bin/Release/*.nupkg
+        archive: false
+    - name: Push package to Github
       run: >
        dotnet nuget push
        ./EPPlus/bin/Release/*.nupkg
