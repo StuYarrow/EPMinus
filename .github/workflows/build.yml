@@ -71,6 +71,7 @@ jobs:
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
     - name: Tag repo with version
-      uses: rickstaa/action-create-tag@v1
-      with:
-        tag: v${{ steps.get_major_version.outputs.info }}.${{ steps.get_minor_version.outputs.info }}.${{ steps.get_build_number.outputs.build_number }}
+      uses: mathieudutour/github-tag-action@v6.2
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          custom_tag: v${{ steps.get_major_version.outputs.info }}.${{ steps.get_minor_version.outputs.info }}.${{ steps.get_build_number.outputs.build_number }}
