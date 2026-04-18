@@ -65,7 +65,7 @@ jobs:
     - name: Push package
       run: >
        dotnet nuget push
-       ./EPPlus/bin/Release/*.nupkg
+       .\EPPlus\bin\Release\*.nupkg
        -k ${GITHUB_TOKEN}
        -s https://nuget.pkg.github.com/StuYarrow/index.json
       env:
