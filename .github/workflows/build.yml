@@ -53,7 +53,7 @@ jobs:
     - name: Push package
       run: >
        dotnet nuget push
-       .\EPPlus\bin\Release\*.nupkg
+       ./EPPlus/bin/Release/*.nupkg
        -k ${{ secrets.GITHUB_TOKEN }}
        -s https://nuget.pkg.github.com/StuYarrow/index.json
     - name: Tag repo with version
