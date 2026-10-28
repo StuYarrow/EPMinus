@@ -5,7 +5,7 @@
     <AssemblyTitle>EPMinus</AssemblyTitle>
     <Description>
       This is a fork of EPPlus v4.5.3.3, the last free version of EPPlus by Jan Källman.
-      It targets netstandard2.1 only and the dependencies are updated, but it is otherwise essentially unmodified.
+      It targets netstandard2.1 only, and the dependencies are updated, but it is otherwise essentially unmodified.
       Much of the functionality is untested.
     </Description>
     <PackageId>StuYarrow.EPMinus</PackageId>
@@ -38,10 +38,10 @@
   </ItemGroup>
 
   <ItemGroup>
-    <PackageReference Include="Microsoft.Extensions.Configuration.Json" Version="10.0.6" />
-    <PackageReference Include="System.Drawing.Common" Version="10.0.6" />
-    <PackageReference Include="System.Security.Cryptography.Pkcs" Version="10.0.6" />
-    <PackageReference Include="System.Text.Encoding.CodePages" Version="10.0.6" />
+    <PackageReference Include="Microsoft.Extensions.Configuration.Json" Version="10.0.14" />
+    <PackageReference Include="System.Drawing.Common" Version="10.0.14" />
+    <PackageReference Include="System.Security.Cryptography.Pkcs" Version="10.0.14" />
+    <PackageReference Include="System.Text.Encoding.CodePages" Version="10.0.14" />
   </ItemGroup>
 
   <ItemGroup>
